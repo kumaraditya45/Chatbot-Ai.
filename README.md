@@ -1,9 +1,9 @@
-# Chatbot-Ai.
+
 <html lang="hi">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI Assistant — Aditya Kumar</title>
+<title>AI Assistant — Kumar Aditya</title>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
 <style>
 :root{
@@ -316,7 +316,11 @@ async function sendMsg(){
   try{
     const res = await fetch('https://api.anthropic.com/v1/messages',{
       method:'POST',
-      headers:{'Content-Type':'application/json'},
+      headers:{
+        'Content-Type':'application/json',
+        'x-api-key':'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',
+        'anthropic-version':'2023-06-01'
+      },
       body: JSON.stringify({
         model:'claude-sonnet-4-20250514',
         max_tokens:1024,
